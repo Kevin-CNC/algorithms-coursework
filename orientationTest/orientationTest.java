@@ -1,7 +1,5 @@
 package orientationTest;
 
-import orientationTest.point;
-
 public class orientationTest{
     // Method to find the cross product of  3  points
     public static int orientation(point A, point B, point C){
@@ -34,8 +32,8 @@ public class orientationTest{
 
         System.out.println("Case 3: " + orientation(c3_A, c3_B, c3_C));
 
-        // Case 3: Experiment with jagged line
-        // scenario: all points are scattered at different points of the carthesian plane
+        // Case 4: All points equal
+        // scenario: all points are on the exact same co-ordinates, expecting a 0 result.
         point c4_A = new point(1, 4);
         point c4_B = new point(-6, 7);
         point c4_C = new point(4, -5);
