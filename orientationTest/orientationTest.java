@@ -34,9 +34,9 @@ public class orientationTest{
 
         // Case 4: All points equal
         // scenario: all points are on the exact same co-ordinates, expecting a 0 result.
-        point c4_A = new point(1, 4);
-        point c4_B = new point(-6, 7);
-        point c4_C = new point(4, -5);
+        point c4_A = new point(1, 0);
+        point c4_B = new point(1, 0);
+        point c4_C = new point(1, 0);
 
         System.out.println("Case 4: " + orientation(c4_A, c4_B, c4_C));
 
