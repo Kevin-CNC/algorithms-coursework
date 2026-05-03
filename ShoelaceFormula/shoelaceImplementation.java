@@ -39,9 +39,9 @@ public class shoelaceImplementation {
         // Case 2: Unit Square with a known area of 9 units squared.
         // 3*3 = 9
         point c2_P1 = new point(0, 0);
-        point c2_P2 = new point(3, 0);
-        point c2_P3 = new point(3, 3);
-        point c2_P4 = new point(0, 3);
+        point c2_P2 = new point(1, 0);
+        point c2_P3 = new point(1, 1);
+        point c2_P4 = new point(0, 1);
         point[] c2_Vertices = {c2_P1, c2_P2, c2_P3, c2_P4};
 
         System.out.println("Area of Case 2: " + polygonArea(c2_Vertices));
