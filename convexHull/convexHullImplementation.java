@@ -61,10 +61,13 @@ public class convexHullImplementation {
         point[] points = {c1P1, c1P2, c1P3};
 
         List<point> case1Hull = convexHull(points);
-        System.out.println("Convex Hull:");
+        System.out.println("Case 1 Convex Hull:");
         for (point p : case1Hull) {
-            System.out.println("(" + p.x + ", " + p.y + ")");
+            System.out.print("(" + p.x + ", " + p.y + ") ");
         }
+
+        
+        System.out.println();
 
 
         // Case 2: 9-Points set
@@ -81,9 +84,9 @@ public class convexHullImplementation {
         point[] points2 = {c2P1, c2P2, c2P3, c2P4, c2P5, c2P6, c2P7, c2P8, c2P9};
 
         List<point> case2Hull = convexHull(points2);
-        System.out.println("Convex Hull:");
+        System.out.println("Case 2 Convex Hull:");
         for (point p : case2Hull) {
-            System.out.println("(" + p.x + ", " + p.y + ")");
+            System.out.print("(" + p.x + ", " + p.y + ") ");
         }
     }
 
