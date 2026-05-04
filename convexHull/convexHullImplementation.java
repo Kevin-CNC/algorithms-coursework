@@ -34,16 +34,18 @@ public class convexHullImplementation {
         int currentP = leftMost;
         int nextP;
 
+        // use a 'do-while' loop to ensure the leftmost point is added and the loop is ran at LEAST once
         do {
             hullkStack.add(points[currentP]);
             nextP = 0;
             for (int i = 1; i < pointsL; i++) {
-                if (nextP == currentP ||
-                    orientation(points[currentP], points[nextP], points[i]) == 1) {
+                // check if the orientation given is 1 (counter-clockwise) if so, update the nextP to be the current point being checked
+                if (nextP == currentP || orientation(points[currentP], points[nextP], points[i]) == 1) {
                     nextP = i;
                 }
             }
             currentP = nextP;
+
         } while (currentP != leftMost);
         return hullkStack;
     }
