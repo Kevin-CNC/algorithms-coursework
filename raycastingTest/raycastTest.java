@@ -36,13 +36,44 @@ public class raycastTest {
 
 
     public static void main(String[] args) {
-        point[] polygon = {
-            new point(0, 0),
-            new point(5, 0),
-            new point(5, 5),
-            new point(0, 5)
+
+        // Case 1: Point inside a square
+        point[] square1 = {new point(1, 1),new point(4, 4),new point(1, 4),new point(4, 1)};
+        point c1OriginPoint = new point(2, 2);
+        System.out.println("Case 1: The point is " + (isInsidePolygon(c1OriginPoint, square1) ? "inside" : "outside"));
+
+
+        // Case 2: Point inside a square
+        point[] square2 = {
+            new point(1, 1),
+            new point(4, 4),
+            new point(1, 4),
+            new point(4, 1)
         };
-        point q = new point(2, 2);
-        System.out.println("Point is " + (isInsidePolygon(q, polygon) ? "inside" : "outside") + " the polygon.");
+        point c2OriginPoint = new point(7, 7);
+        System.out.println("Case 2: The point is " + (isInsidePolygon(c2OriginPoint, square2) ? "inside" : "outside"));
+
+
+        // Case 3: Point on an edge
+        point[] square3 = {
+            new point(1, 1),
+            new point(5, 5),
+            new point(5,1),
+            new point(1, 5)
+        };
+        point c3OriginPoint = new point(5, 4);
+        System.out.println("Case 3: The point is " + (isInsidePolygon(c3OriginPoint, square3) ? "inside" : "outside"));
+
+         // Case 4: Point in a concave polygon
+        point[] polygon4 = {
+            new point(3, 5),
+            new point(3, 3),
+            new point(1,3),
+            new point(3, 1),
+            new point(5, 1),
+            new point(5, 3)
+        };
+        point c4OriginPoint = new point(2, 2);
+        System.out.println("Case 4: The point is " + (isInsidePolygon(c4OriginPoint, polygon4) ? "inside" : "outside"));
     }
 }
