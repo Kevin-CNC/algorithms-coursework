@@ -58,5 +58,10 @@ public class shoelaceImplementation {
         point[] c3_Vertices = {c3_P1, c3_P2, c3_P3, c3_P4, c3_P5, c3_P6};
 
         System.out.println("Area of Case 3: " + polygonArea(c3_Vertices));
+
+
+        // Testing Case: Reversed order of vertices
+        point[] reversed = {c3_P6, c3_P5, c3_P4, c3_P3, c3_P2, c3_P1};
+        System.out.println("Area of Reversed Case: " + polygonArea(reversed));
     }
 }
